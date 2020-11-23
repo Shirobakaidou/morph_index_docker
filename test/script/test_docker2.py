@@ -17,7 +17,7 @@ import geopandas as gpd
 
 import rasterio
 from rasterio.mask import mask
-from rasterio.transform import TransformMethodsMixin as TMM
+#from rasterio.transform import TransformMethodsMixin as TMM
 
 
 
@@ -615,6 +615,52 @@ def basinIndex(wd, path_input, path_output, dem, basin, crs):
         print("Basin-", i, " Total Stream Length = ", Len_streams, "km")
         print("Basin-", i, " Bifurcation Ratio = ", Bif_ratio)
         print("Basin-", i, " Channel Gradient = ", channel_gradient)
+        
+        
+        ###########################################
+        ### Index 18: Average Mainchannel Slope ###
+        ###########################################
+        
+#        gs.run_command('v.to.points',
+#                       input = 'v_mainchannel_dim',
+#                       output = 'v_mainchannel_dim_point',
+#                       type = 'line',
+#                       quiet = True,
+#                       overwrite = True)
+#        vertex = gs.read_command('v.out.ascii',
+#                                 input = 'v_mainchannel_dim_point',
+#                                 quiet = True,
+#                                 overwrite = True).strip().split('\n')
+        
+#        nodi = np.zeros((len(vertex), 4), float)
+#        pendenze = []
+        
+#        for i in range(len(vertex)):
+#            x, y = float(vertex[i].split('|')[0]), float(vertex[i].split('|')[1])
+#            vertice1 = gs.read_command('r.what',
+#                                       map = 'r_elevation',
+#                                       coordinates = '%s,%s' % (x,y))
+#            vertice = vertice1.replace('\n', '').replace('||', '|').split('|')
+#            nodi[i, 0], nodi[i, 1], nodi[i, 2] = float(vertice[0]), float(vertice[1]), float(vertice[2])
+            
+#        for i in range(0, len(vertex)-1, 2):
+#            dist = math.sqrt(math.fabs((nodi[i, 0] - nodi[i+1, 0]))**2 + math.fabs((nodi[i, 1] - nodi[i+1, 1]))**2)
+#            deltaz = math.fabs(nodi[i, 2] - nodi[i+1, 2])  
+#            # Control to prevent float division by zero (dist=0)
+#            try:
+#                pendenza = deltaz / dist
+#                pendenze.append(pendenza)
+#                mainchannel_slope = float(sum(pendenze) / len(pendenze)*100)
+#            except:
+#                pass
+
+
+        ##########################
+        ### Index: Slope Ratio ###
+        ##########################
+        
+#        slope_ratio = mainchannel_slope / basin_slope
+        #Slope_ratio = float(stream_stats_mom[3])
         
         
         
