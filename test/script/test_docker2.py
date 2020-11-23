@@ -21,10 +21,11 @@ from rasterio.mask import mask
 
 
 
-def basinIndex(wd, path_input, path_output, dem, basin, crs):
+def basinIndex(#wd, 
+               path_input, path_output, dem, basin, crs):
     
     # Set working directory
-    os.chdir(wd)
+    #os.chdir(wd)
     
     # Input path
     inpath = path_input
@@ -737,11 +738,12 @@ def basinIndex(wd, path_input, path_output, dem, basin, crs):
 #wd = '/home/shirobakaidou/docker_lab/morph_index/test/'
 #path_input = '/home/shirobakaidou/docker_lab/morph_index/test/input'
 #path_output = '/home/shirobakaidou/docker_lab/morph_index/test/output'    
-wd = '.'
+#wd = '.'
 path_input = '/app/input'
 path_output = '/app/output'
 dem_input = 'hydrosheds_90m.tif'
 basin_input = 'Hydrosheds_level8_centralVN.shp'
 dst_crs = 'EPSG:32648'
 
-basinIndex(wd=wd, path_input=path_input, path_output=path_output, dem=dem_input, basin=basin_input, crs=dst_crs)
+basinIndex(#wd=wd, 
+           path_input=path_input, path_output=path_output, dem=dem_input, basin=basin_input, crs=dst_crs)

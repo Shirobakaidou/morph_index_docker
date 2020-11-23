@@ -1,7 +1,9 @@
+# Base image of GRASS GIS
 FROM mundialis/grass-py3-pdal
 #FROM continuumio/miniconda3
 #CMD grass --config
 
+##------------------Set up Miniconda3----------------------##
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 ENV PATH /opt/conda/bin:$PATH
 
@@ -27,7 +29,7 @@ CMD [ "/bin/bash" ]
 #CMD grass --config
 
 ##--------------------------------------------------------##
-##--------------------------------------------------------##
+##----------Create Conda env to run script----------------##
 
 
 # Set Working Directory to /app
