@@ -45,7 +45,11 @@ SHELL ["conda", "run", "-n", "basinIndex", "/bin/bash", "-c"]
 #RUN python -c "import numpy"
 
 # The code ro run when container is started
-COPY myscript.py ./script/
-#COPY input/. ./input/
-ENTRYPOINT ["conda", "run", "-n", "basinIndex", "python", "./script/myscript.py"]
+COPY script/test_docker2.py ./script/
+COPY input/. ./input/
+
+#CMD conda list
+#CMD cd /app/input && ls
+ENTRYPOINT ["conda", "run", "-n", "basinIndex", "python", "./script/test_docker2.py"]
+
 
