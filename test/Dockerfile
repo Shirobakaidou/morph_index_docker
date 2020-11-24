@@ -3,7 +3,9 @@ FROM mundialis/grass-py3-pdal
 #FROM continuumio/miniconda3
 #CMD grass --config
 
-##------------------Set up Miniconda3----------------------##
+##----------------Set up Miniconda3--------------------##
+## source: continuumio/miniconda3 ##
+
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 ENV PATH /opt/conda/bin:$PATH
 

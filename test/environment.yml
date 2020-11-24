@@ -11,5 +11,5 @@ dependencies:
   - numpy=1.19.1
   - geopandas=0.8.1
   - rasterio=1.1.6
-  - pip:
-    - grass-session #=0.5
+#  - pip:
+#    - grass-session #=0.5

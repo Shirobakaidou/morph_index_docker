@@ -132,7 +132,7 @@ def basinIndex(#wd,
     os.environ['GISBASE'] = str(gisbase)
 
     # Import GRASS Modules
-    from grass_session import Session
+#    from grass_session import Session
     import grass.script as gs
     import grass.script.setup as gsetup
     
