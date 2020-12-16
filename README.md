@@ -1,12 +1,12 @@
 # morph_index_docker
-<br>
+
 ### Following river basin parameters are calculated:
-<br>
-1. **Basin Area (A)** *(GRASS GIS Tool)*
-2. **Basin Perimeter (P)** *(GRASS GIS Tool)*
-3. **Circularity Ratio (Rc)** = 4\pi*A/P^2
-4. **Main Channel Length (MCl)** *(GRASS GIS Tool)*
-5. **Elongation Ratio (Re)** = \frac{2*\sqrt{A/\pi}}{MCL}
+
+1. **Basin Area _(A)_**: _(GRASS GIS Tool)_
+- __Basin Perimeter (P)__: _(GRASS GIS Tool)_
+- __Circularity Ratio (Rc)__ = 4\pi*A/P^2
+* **Main Channel Length (MCl)** *(GRASS GIS Tool)*
+* **Elongation Ratio (Re)** = \frac{2*\sqrt{A/\pi}}{MCL}
 6. **Form Factor (Ff)** = \frac{A}{MCL^2}
 7. **Maximal Elevation (Hmax)** *(GRASS GIS Tool)*
 8. **Minimal Elevation (Hmin)** *(GRASS GIS Tool)*
