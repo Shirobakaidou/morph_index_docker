@@ -12,7 +12,7 @@
 | Form Factor | Ff | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{A}{MCL^2}) | |
 | Maximal Elevation | Hmax | GRASS Tool | |
 | Minimal Elevation | Hmin | GRASS Tool | |
-| Relative Relief | H | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}Hmax - Hmin) | |
+| Relative Relief | H | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}Hmax-Hmin) | |
 | Mean Elevation | Hmean | GRASS Tool | |
 | Relief Ratio | Rr | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{MCL}) | |
 | Dissection Index | Di | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{Hmax}) | |
