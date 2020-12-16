@@ -6,7 +6,7 @@
 | --- | --- | ---| --- |
 | Basin Area | A | GRASS Tool | |
 | Basin Perimeter | P | GRASS Tool | |
-| Main Channel Length | MCl | GRASS Tool | |
+| Main Channel Length | MCL | GRASS Tool | |
 | Maximal Elevation | Hmax | GRASS Tool | |
 | Minimal Elevation | Hmin | GRASS Tool | |
 | Mean Elevation | Hmean | GRASS Tool | |
