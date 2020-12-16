@@ -2,11 +2,28 @@
 
 ### Following river basin parameters are calculated:
 
+| Parameter | Symbol | Calculation | Reference |
+| --- | --- | ---| --- |
+| Basin Area | A | GRASS Tool | |
+| Basin Perimeter | P | GRASS Tool | |
+| Circularity Ratio (Rc) | 4\pi*A/P^2| |
+| Main Channel Length (MCl) | GRASS Tool | |
+| Elongation Ratio (Re) | \frac{2*\sqrt{A/\pi}}{MCL} | |
+| Form Factor (Ff) | \frac{A}{MCL^2} | |
+| Maximal Elevation (Hmax) | GRASS Tool | |
+| Minimal Elevation (Hmin) | GRASS Tool | |
+| Relative Relief (H) | Hmax - Hmin | |
+| Mean Elevation (Hmean) | GRASS Tool | |
+| Relief Ratio (Rr) | H/MCL | |
+| Dissection Index (Di) | H/Hmax | |
+| Hypsometric Integral | \frac{Hmean-Hmin}{H} | |
+| 
+
 1. **Basin Area _(A)_**: _(GRASS GIS Tool)_
-- __Basin Perimeter (P)__: _(GRASS GIS Tool)_
-- __Circularity Ratio (Rc)__ = 4\pi*A/P^2
-* **Main Channel Length (MCl)** *(GRASS GIS Tool)*
-* **Elongation Ratio (Re)** = \frac{2*\sqrt{A/\pi}}{MCL}
+2. __Basin Perimeter (P)__: _(GRASS GIS Tool)_
+3. __Circularity Ratio (Rc)__ = 4\pi*A/P^2
+4. **Main Channel Length (MCl)** *(GRASS GIS Tool)*
+5. **Elongation Ratio (Re)** = \frac{2*\sqrt{A/\pi}}{MCL}
 6. **Form Factor (Ff)** = \frac{A}{MCL^2}
 7. **Maximal Elevation (Hmax)** *(GRASS GIS Tool)*
 8. **Minimal Elevation (Hmin)** *(GRASS GIS Tool)*
