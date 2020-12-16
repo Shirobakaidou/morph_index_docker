@@ -8,7 +8,7 @@
 | Basin Perimeter | P | GRASS Tool | |
 | Circularity Ratio | Rc | 4\pi*A/P^2| |
 | Main Channel Length | MCl | GRASS Tool | |
-| Elongation Ratio | Re | ![equation](https://latex.codecogs.com/gif.latex?\frac{2*\sqrt{A/\pi}}{MCL}) | |
+| Elongation Ratio | Re | ![equation](https://latex.codecogs.com/gif.latex?\dpi{250}\frac{2*\sqrt{A/\pi}}{MCL}) | |
 | Form Factor | Ff | \frac{A}{MCL^2} | |
 | Maximal Elevation | Hmax | GRASS Tool | |
 | Minimal Elevation | Hmin | GRASS Tool | |
