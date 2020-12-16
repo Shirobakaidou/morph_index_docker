@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sun Nov 22 23:44:59 2020
-
-@author: shirobakaidou
+@purpose: Morphometric characterization of river basins
+@author: Kemeng Liu
+@contact: kemeng.liu@stud-mail.uni-wuerzburg.de
+@reference: GRASS GIS module 'r.basin' developed by Margherita Di Leo and Massimo Di Stefano
+            (https://github.com/OSGeo/grass-addons/tree/master/grass7/raster/r.basin)
 """
 import os
 import sys
@@ -11,27 +13,57 @@ import subprocess
 import shutil
 import json
 import math
-
 import numpy as np
 import geopandas as gpd
-
 import rasterio
 from rasterio.mask import mask
-#from rasterio.transform import TransformMethodsMixin as TMM
 
 
+# Global Variables
+path_input = '/app/input'
+path_output = '/app/output'
 
-def basinIndex(#wd, 
-               path_input, path_output, dem, basin, crs):
+
+def basinIndex(dem, basin, crs,
+               inpath = path_input, 
+               outpath = path_output, 
+               ):
+    """Calculate hydromorphological parameters of each basin polygon
+    of the input .shp file, and store the parameters in the attribute
+    table of the output .shp file.
+    
+    
+    
+    Parameters
+    ----------
+    dem : string
+        File name of the input DEM.
+    basin : string
+        File name of the input SHP-file of basin polygons.
+    crs : string
+        EPSG code of the basins, e.g. "32648".
+    path_input : string (optional)
+        The path to the directory containing all input files.
+        If the function is running inside Docker container, this argument should stay as default.
+    path_output : string
+        The path to the directory containing the output SHP-file.
+        If the function is running inside Docker container, this argument should stay as default.
+    
+    
+    Returns
+    -------
+    A printed message indicating the location where the output SHP-file is stored
+    
+    """
     
     # Set working directory
     #os.chdir(wd)
     
     # Input path
-    inpath = path_input
+    #inpath = path_input
     
     # Output path
-    outpath = path_output
+    #outpath = path_output
     if os.path.exists(outpath):
         shutil.rmtree(outpath)
     os.makedirs(outpath)
@@ -44,7 +76,7 @@ def basinIndex(#wd,
     basin_input = basin
     
     # Target CRS
-    dst_crs = crs
+    dst_crs = "EPSG:"+crs
     
     # GRASS Database
     grass_dbase = os.path.join(outpath, 'grass_session')
@@ -132,7 +164,7 @@ def basinIndex(#wd,
     os.environ['GISBASE'] = str(gisbase)
 
     # Import GRASS Modules
-#    from grass_session import Session
+    #from grass_session import Session
     import grass.script as gs
     import grass.script.setup as gsetup
     
@@ -444,6 +476,7 @@ def basinIndex(#wd,
         #########################################
         ### Index 1-2: Basin Area & Perimeter ###
         #########################################
+        # Reference: GRASS GIS Tool
         
         # Add two columns to the table 'basin': Area and Perimeter
         gs.run_command('v.db.addcolumn',
@@ -565,7 +598,7 @@ def basinIndex(#wd,
         ### Index 11: Relief Ratio ###
         ##############################
         
-        relief_ratio = (relative_relief/1000)/MCL
+        relief_ratio = relative_relief/MCL
         print("Basin-", i, " Relief Ratio = ", relief_ratio)
         
         
@@ -619,7 +652,7 @@ def basinIndex(#wd,
         
         
         ###########################################
-        ### Index 18: Average Mainchannel Slope ###
+        ### Index 18: Average Mainstream Slope ###
         ###########################################
         
 #        gs.run_command('v.to.points',
@@ -656,9 +689,9 @@ def basinIndex(#wd,
 #                pass
 
 
-        ##########################
-        ### Index: Slope Ratio ###
-        ##########################
+        #############################
+        ### Index 19: Slope Ratio ###
+        #############################
         
 #        slope_ratio = mainchannel_slope / basin_slope
         #Slope_ratio = float(stream_stats_mom[3])
@@ -738,12 +771,10 @@ def basinIndex(#wd,
 #wd = '/home/shirobakaidou/docker_lab/morph_index/test/'
 #path_input = '/home/shirobakaidou/docker_lab/morph_index/test/input'
 #path_output = '/home/shirobakaidou/docker_lab/morph_index/test/output'    
-#wd = '.'
-path_input = '/app/input'
-path_output = '/app/output'
+
 dem_input = 'hydrosheds_90m.tif'
 basin_input = 'Hydrosheds_level8_centralVN.shp'
-dst_crs = 'EPSG:32648'
+dst_crs = '32648'
 
-basinIndex(#wd=wd, 
-           path_input=path_input, path_output=path_output, dem=dem_input, basin=basin_input, crs=dst_crs)
+basinIndex(#path_input=path_input, path_output=path_output, 
+           dem=dem_input, basin=basin_input, crs=dst_crs)
