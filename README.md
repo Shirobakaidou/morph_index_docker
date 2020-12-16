@@ -15,14 +15,14 @@
 | Bifurcation Ratio | Rb | GRASS Tool | |
 | Average Mainstream Slope | Sms | GRASS Tool | |
 | Circularity Ratio | Rc | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{4\pi*A}{P^2}) | |
-| Elongation Ratio | Re | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{2*\sqrt{A/\pi}}{MCL}) | |
+| Elongation Ratio | Re | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{2*\sqrt{\frac{A}{\pi}}}{MCL}) | |
 | Form Factor | Ff | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{A}{MCL^2}) | |
 | Relative Relief | H | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}H_{max}-H_{min}) | |
 | Relief Ratio | Rr | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{MCL}) | |
-| Dissection Index | Di | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{Hmax}) | |
-| Hypsometric Integral | | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{Hmean-Hmin}{H}) | |
+| Dissection Index | Di | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{H_{max}}) | |
+| Hypsometric Integral | | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H_{mean}-H_{min}}{H}) | |
 | Channel Gradient | Cg | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{\frac{\pi}{2}*\frac{\frac{Lu}{Lu-1}}{Rb}}) | |
-| Slope Ratio | Rs| ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{Sms}{Sb}) | |
+| Slope Ratio | Rs| ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{S_{ms}}{S_{b}}) | |
 
 
 __Copy files from Docker Container to host__:
