@@ -8,15 +8,15 @@
 | Basin Perimeter | P | GRASS Tool | |
 | Circularity Ratio | Rc | 4\pi*A/P^2| |
 | Main Channel Length | MCl | GRASS Tool | |
-| Elongation Ratio | Re | ![equation](https://latex.codecogs.com/gif.latex?\dpi{100}\frac{2*\sqrt{A/\pi}}{MCL}) | |
-| Form Factor | Ff | \frac{A}{MCL^2} | |
+| Elongation Ratio | Re | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{2*\sqrt{A/\pi}}{MCL}) | |
+| Form Factor | Ff | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{A}{MCL^2} | |
 | Maximal Elevation | Hmax | GRASS Tool | |
 | Minimal Elevation | Hmin | GRASS Tool | |
 | Relative Relief | H | Hmax - Hmin | |
 | Mean Elevation | Hmean | GRASS Tool | |
 | Relief Ratio | Rr | H/MCL | |
 | Dissection Index | Di | H/Hmax | |
-| Hypsometric Integral | | \frac{Hmean-Hmin}{H} | |
+| Hypsometric Integral | | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{Hmean-Hmin}{H} | |
 | Average Basin Slope | Sb | GRASS Tool | |
 | Total Stream Length | Lu | GRASS Tool | |
 | Bifurcation Ratio | Rb | GRASS Tool | |
