@@ -23,5 +23,5 @@
 19. **Slope Ratio (Rs)** = Sms/Sb
 
 
-Copy files from Docker Container to host:
+__Copy files from Docker Container to host__:
 docker cp <container-id>:/file/path/within/container /host/path
