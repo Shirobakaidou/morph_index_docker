@@ -25,6 +25,9 @@
 | Slope Ratio | Rs| ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{S_{ms}}{S_{b}}) | |
 
 
-__Copy files from Docker Container to Local__:
+__Copy files from Docker Container to Local__:<br>
 `docker cp <container-id>:/file/path/within/container /local/path`
-The location of the output SHP-file will get printed after successful execution of the program. For instance, the output of the sample input dataset is stored at "/app/output/Hydrosheds_level8_centralVN_index" in the docker container; so the "/file/path/within/container" would be "/app/output/Hydrosheds_level8_centralVN_index"
+<br><br>
+The location of the output SHP-file will get printed after successful execution of the program. For instance, the output of the sample input dataset is stored at **/app/output/Hydrosheds_level8_centralVN_index** in the docker container; so the 
+`/file/path/within/container` 
+would be **/app/output/Hydrosheds_level8_centralVN_index**
