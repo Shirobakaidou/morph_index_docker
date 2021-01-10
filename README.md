@@ -28,6 +28,9 @@ This program calculates selected hydromorphological parameters using Python3 and
 | Channel Gradient | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}C_{g}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{\frac{\pi}{2}*Cl_{p}}) | <i>Rai(2017)<sup>3</sup></i> |
 | Slope Ratio | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}R_{s}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{S_{ms}}{S_{b}}) | ?? |
 
+<p><i><sup>*</sup>Main Channel Length (MCL) is regarded as identical to Basin Length (L<sup>b</sup>) in this program since the calculations are based on <b>Horton stream order</b> (see http://wgbis.ces.iisc.ernet.in/grass/grass70/manuals/addons/r.stream.order.html).
+<br>
+
 <p><i><sup>1</sup>Mahala, A. (2019). The significance of morphometric analysis to understand the hydrological and morphological characteristics in two different morpho-climatic settings. Applied Water Science, 10(1). doi:10.1007/s13201-019-1118-2</i></p>
 <p><i><sup>2</sup>P. Dinagara Pandi, T. Thena, B. Nirmal, M. R. Aswathy, K. Saravanan & K.
 Mohan (2017) Morphometric analyses of Neyyar River Basin, southern Kerala, India, Geology,
