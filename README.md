@@ -2,7 +2,7 @@
 
 This program calculates selected hydromorphological parameters using Python3 and GRASS GIS running inside a Docker environment. It takes user-defined DEM <i>(in geotiff format)</i> and river basins <i>(in shp format)</i> as input and outputs a SHP-file with an attribute table containing all calculted parameters of each basin.
 
-<br><br>
+<br>
 
 ## Following river basin parameters are calculated:
 
@@ -37,17 +37,16 @@ Ecology, and Landscapes, 1:4, 249-256, doi: 10.1080/24749508.2017.1389494</i></p
 <p><i><sup>5</sup>Strahler, A. N. (1952). Hypsometric analysis of erosional topography. Bulletin of the Geological Society of America, 63, 17–42.</i></p>
 <p><i><sup>6</sup>Horton, R. E. (1932). Drainage-basin characteristics. Transactions, American Geophysical Union, 13, 350–361.</i></p>
 
-<br><br>
-
+<br>
 
 ## Usage
 1. __Clone this repository to Local.__
 <br><br>
 
-2. __Place the input DEM and basin in the <i>/input folder</i>.__ (just like the attached sample DEM 'hydrosheds_90m.tif' and basin SHP-file 'Hydrosheds_level8_centralVN.shp')
+2. __Place the input DEM and basin in the <i>/input folder</i>.__ (just like the attached sample DEM '<i>hydrosheds_90m.tif</i>' and basin SHP-file '<i>Hydrosheds_level8_centralVN.shp</i>')
 <br><br>
 
-3. __Let the input data be your own data.__ please replace the <b><i>line 758~760</i></b> of the python script <b><i>/script/morph_index.py</i></b> with the file names of your own input data and define the coordinate reference system (CRS) as well.
+3. __Let the input data be your own data.__ please replace the <b><i>line 758~760</i></b> of the python script "<b><i>/script/morph_index.py</i></b>" with the file names of your own input data and define the coordinate reference system (CRS) as well.
 <br><br>
 
 4. __Build Docker Image__:<br>
