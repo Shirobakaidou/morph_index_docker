@@ -14,8 +14,8 @@
 | Total Stream Length | Lu | GRASS Tool | |
 | Bifurcation Ratio | Rb | GRASS Tool | |
 | Average Mainstream Slope | Sms | GRASS Tool | |
-| Circularity Ratio | Rc | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{4\pi*A}{P^2}) | |
-| Elongation Ratio | Re | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{2*\sqrt{\frac{A}{\pi}}}{MCL}) | |
+| Circularity Ratio | Rc | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{4\pi*A}{P^2}) | ![text](https://quicklatex.com/cache3/4f/ql_dc5d2b7e4b629efbc5e5fb2dc2b1a44f_l3.png) |
+| Elongation Ratio | Re | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{2*\sqrt{\frac{A}{\pi}}}{MCL}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{100}Schumm^4) |
 | Form Factor | Ff | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{A}{MCL^2}) | |
 | Relative Relief | H | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}H_{max}-H_{min}) | |
 | Relief Ratio | Rr | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{MCL}) | |
