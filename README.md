@@ -15,16 +15,23 @@
 | Bifurcation Ratio | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}R_{b}) | GRASS Tool | |
 | Average Mainstream Slope | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}S_{ms}) | GRASS Tool | |
 | Circularity Ratio | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}R_{c}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{4\pi*A}{P^2}) | <i>Mahala(2019)<sup>1</sup></i> |
-| Elongation Ratio | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}R_{e}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{2*\sqrt{\frac{A}{\pi}}}{MCL}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}Pandi(2017)^2,Schumm(1956)^4) |
-| Form Factor | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}F_{f}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{A}{MCL^2}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}Pandi(2017)^2,Horton(1932)^6) |
-| Total Basin Relief | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}H) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}Z-z) | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}Pandi(2017)^2,Rai(2017)^3) |
-| Relief Ratio | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}R_{r}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{MCL}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}Pandi(2017)^2,Schumm(1956)^4) |
-| Dissection Index | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}D_{i}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{Ra}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}Mahala(2019)^1,Rai(2017)^3) |
-| Hypsometric Integral | | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H_{mean}-z}{H}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}Strahler(1952)^5??) |
-| Channel Gradient | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}C_{g}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{\frac{\pi}{2}*Cl_{p}}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}Rai(2017)^3) |
+| Elongation Ratio | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}R_{e}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{2*\sqrt{\frac{A}{\pi}}}{MCL}) | <i>Pandi(2017)<sup>2</sup>, Schumm(1956)<sup>4</sup></i> |
+| Form Factor | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}F_{f}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{A}{MCL^2}) | <i>Pandi(2017)<sup>2</sup>, Horton(1932)<sup>6</sup></i> |
+| Total Basin Relief | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}H) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}Z-z) | <i>Pandi(2017)<sup>2</sup>, Rai(2017)<sup>3</sup></i> |
+| Relief Ratio | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}R_{r}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{MCL}) | <i>Pandi(2017)<sup>2</sup>, Schumm(1956)<sup>4</sup></i> |
+| Dissection Index | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}D_{i}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{Ra}) | <i>Mahala(2019)<sup>1</sup>, Rai(2017)<sup>3</sup></i> |
+| Hypsometric Integral | | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H_{mean}-z}{H}) | <i>Strahler(1952)<sup>5</sup>??</i>) |
+| Channel Gradient | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}C_{g}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{\frac{\pi}{2}*Cl_{p}}) | <i>Rai(2017)<sup>3</sup></i>) |
 | Slope Ratio | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}R_{s}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{S_{ms}}{S_{b}}) | ?? |
 
 <p><i><sup>1</sup>Mahala, A. (2019). The significance of morphometric analysis to understand the hydrological and morphological characteristics in two different morpho-climatic settings. Applied Water Science, 10(1). doi:10.1007/s13201-019-1118-2</i></p>
+<p><i><sup>2</sup>P. Dinagara Pandi, T. Thena, B. Nirmal, M. R. Aswathy, K. Saravanan & K.
+Mohan (2017) Morphometric analyses of Neyyar River Basin, southern Kerala, India, Geology,
+Ecology, and Landscapes, 1:4, 249-256, DOI: 10.1080/24749508.2017.1389494</i></p>
+<p><i><sup>3</sup>Rai, P.K., Chaubey, P.K., Mohan, K. et al. Geoinformatics for assessing the inferences of quantitative drainage morphometry of the Narmada Basin in India. Appl Geomat 9, 167–189 (2017). https://doi.org/10.1007/s12518-017-0191-1</i></p>
+<p><i><sup>4</sup>Schumm, S. A. (1956). Evolution of drainage systems & slopes in badlands at Perth Anboy, New Jersey. Geological Society of America Bulletin, 67, 597–646.</i></p>
+<p><i><sup>5</sup>Strahler, A. N. (1952). Hypsometric analysis of erosional topography. Bulletin of the Geological Society of America, 63, 17–42.</i></p>
+<p><i><sup>6</sup>Horton, R. E. (1932). Drainage-basin characteristics. Transactions, American Geophysical Union, 13, 350–361.</i></p>
 
 
 __Copy files from Docker Container to Local__:<br>
