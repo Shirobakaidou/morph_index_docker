@@ -14,7 +14,7 @@
 | Total Stream Length | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}L_{u}) | GRASS Tool | |
 | Bifurcation Ratio | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}R_{b}) | GRASS Tool | |
 | Average Mainstream Slope | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}S_{ms}) | GRASS Tool | |
-| Circularity Ratio | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}R_{c}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{4\pi*A}{P^2}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}Mahala(2019)^1) |
+| Circularity Ratio | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}R_{c}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{4\pi*A}{P^2}) | <i>Mahala(2019)<sup>1</sup></i> |
 | Elongation Ratio | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}R_{e}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{2*\sqrt{\frac{A}{\pi}}}{MCL}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}Pandi(2017)^2,Schumm(1956)^4) |
 | Form Factor | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}F_{f}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{A}{MCL^2}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}Pandi(2017)^2,Horton(1932)^6) |
 | Total Basin Relief | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}H) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}Z-z) | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}Pandi(2017)^2,Rai(2017)^3) |
