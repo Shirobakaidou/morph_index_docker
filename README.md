@@ -4,25 +4,25 @@
 
 | Parameter | Symbol | Calculation | Reference |
 | --- | --- | ---| --- |
-| Basin Area | A | GRASS Tool | |
-| Basin Perimeter | P | GRASS Tool | |
-| Main Channel Length | MCL | GRASS Tool | |
-| Maximal Elevation | Hmax | GRASS Tool | |
-| Minimal Elevation | Hmin | GRASS Tool | |
+| Basin Area | ![equation](https://latex.codecogs.com/gif.latex?\dpi{100}A) | GRASS Tool | |
+| Basin Perimeter | ![equation](https://latex.codecogs.com/gif.latex?\dpi{100}P) | GRASS Tool | |
+| Main Channel Length | ![equation](https://latex.codecogs.com/gif.latex?\dpi{100}MCL) | GRASS Tool | |
+| Maximum Relief / Absolute Relief | ![text](https://latex.codecogs.com/gif.latex?\dpi{100}Z/R_{a}) | GRASS Tool | |
+| Minimum Relief | z | GRASS Tool | |
 | Mean Elevation | Hmean | GRASS Tool | |
 | Average Basin Slope | Sb | GRASS Tool | |
 | Total Stream Length | Lu | GRASS Tool | |
 | Bifurcation Ratio | Rb | GRASS Tool | |
 | Average Mainstream Slope | Sms | GRASS Tool | |
-| Circularity Ratio | Rc | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{4\pi*A}{P^2}) | ![text](https://quicklatex.com/cache3/4f/ql_dc5d2b7e4b629efbc5e5fb2dc2b1a44f_l3.png) |
-| Elongation Ratio | Re | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{2*\sqrt{\frac{A}{\pi}}}{MCL}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{100}Schumm^4) |
-| Form Factor | Ff | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{A}{MCL^2}) | |
-| Relative Relief | H | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}H_{max}-H_{min}) | |
-| Relief Ratio | Rr | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{MCL}) | |
-| Dissection Index | Di | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{H_{max}}) | |
-| Hypsometric Integral | | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H_{mean}-H_{min}}{H}) | |
-| Channel Gradient | Cg | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{\frac{\pi}{2}*\frac{\frac{Lu}{Lu-1}}{Rb}}) | |
-| Slope Ratio | Rs| ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{S_{ms}}{S_{b}}) | |
+| Circularity Ratio | Rc | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{4\pi*A}{P^2}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{100}Mahala(2019)^1) |
+| Elongation Ratio | Re | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{2*\sqrt{\frac{A}{\pi}}}{MCL}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{100}Schumm(1956)^4) |
+| Form Factor | Ff | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{A}{MCL^2}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{100}Horton(1932)^6) |
+| Total Basin Relief | H | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}Z-z) | ![text](https://latex.codecogs.com/gif.latex?\dpi{100}Rai(2017)^2, Pandi(2017)^3 |
+| Relief Ratio | Rr | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{MCL}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{100}Schumm(1956)^4) |
+| Dissection Index | Di | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{Ra}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{100}Mahala(2019)^1, Rai(2017)^2 |
+| Hypsometric Integral | | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H_{mean}-z}{H}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{100}Strahler(1952)^5) |
+| Channel Gradient | Cg | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{\frac{\pi}{2}*\frac{\frac{Lu}{Lu-1}}{Rb}}) | ![text](https://latex.codecogs.com/gif.latex?\dpi{100}Rai(2017)^2, Pandi(2017)^3 |
+| Slope Ratio | Rs| ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{S_{ms}}{S_{b}}) | ?? |
 
 
 __Copy files from Docker Container to Local__:<br>
