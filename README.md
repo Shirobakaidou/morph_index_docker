@@ -49,7 +49,7 @@ Ecology, and Landscapes, 1:4, 249-256, doi: 10.1080/24749508.2017.1389494</i></p
 2. __Place the input DEM and basin in the <i>/input folder</i>.__ (just like the attached sample DEM '<i>hydrosheds_90m.tif</i>' and basin SHP-file '<i>Hydrosheds_level8_centralVN.shp</i>')
 <br><br>
 
-3. __Let the input data be your own data.__ please replace the <b><i>line 758~760</i></b> of the python script "<b><i>/script/morph_index.py</i></b>" with the file names of your own input data and define the coordinate reference system (CRS) as well.
+3. __Let the input data be your own data.__ please replace the <b><i>line 760~762</i></b> of the python script "<b><i>/script/morph_index.py</i></b>" with the file names of your own input data and define the coordinate reference system (CRS) as well.
 <br><br>
 
 4. __Build Docker Image__:<br>
