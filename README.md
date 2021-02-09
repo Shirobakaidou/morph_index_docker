@@ -24,7 +24,7 @@ This program calculates selected hydromorphological parameters using Python3 and
 | Relative Relief | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}H) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}Z-z) | <i>Mahala(2019)<sup>1</sup></i> |
 | Relief Ratio | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}R_{r}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{MCL}) | <i>Pandi(2017)<sup>2</sup>, Schumm(1956)<sup>4</sup></i> |
 | Dissection Index | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}D_{i}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{Ra}) | <i>Mahala(2019)<sup>1</sup>, Rai(2017)<sup>3</sup></i> |
-| Hypsometric Integral | | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H_{mean}-z}{H}) | <i>Strahler(1952)<sup>5</sup>??</i> |
+| Hypsometric Integral | | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H_{mean}-z}{H}) | <i>Pike(1971)<sup>5</sup></i> |
 | Channel Gradient | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}C_{g}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{\frac{\pi}{2}*Cl_{p}}) | <i>Rai(2017)<sup>3</sup></i> |
 | Slope Ratio | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}R_{s}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{S_{ms}}{S_{b}}) | ?? |
 
@@ -37,7 +37,7 @@ Mohan (2017) Morphometric analyses of Neyyar River Basin, southern Kerala, India
 Ecology, and Landscapes, 1:4, 249-256, doi: 10.1080/24749508.2017.1389494</i></p>
 <p><i><sup>3</sup>Rai, P.K., Chaubey, P.K., Mohan, K. et al. Geoinformatics for assessing the inferences of quantitative drainage morphometry of the Narmada Basin in India. Appl Geomat 9, 167–189 (2017). doi: 10.1007/s12518-017-0191-1</i></p>
 <p><i><sup>4</sup>Schumm, S. A. (1956). Evolution of drainage systems & slopes in badlands at Perth Anboy, New Jersey. Geological Society of America Bulletin, 67, 597–646.</i></p>
-<p><i><sup>5</sup>Strahler, A. N. (1952). Hypsometric analysis of erosional topography. Bulletin of the Geological Society of America, 63, 17–42.</i></p>
+<p><i><sup>5</sup>PIKE, R. J. & WILSON, S. E. (1971): Elevation-Relief Ratio, Hypsometric Integral, and Geomorphic Area-Altitude Analysis. GSA Bulletin, 82, S. 1079-1084.</i></p>
 <p><i><sup>6</sup>Horton, R. E. (1932). Drainage-basin characteristics. Transactions, American Geophysical Union, 13, 350–361.</i></p>
 
 <br>
