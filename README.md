@@ -26,19 +26,20 @@ This program calculates selected hydromorphological parameters using Python3 and
 | Dissection Index | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}D_{i}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{Ra}) | <i>Mahala(2019)<sup>1</sup>, Rai(2017)<sup>3</sup></i> |
 | Hypsometric Integral | | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H_{mean}-z}{H}) | <i>Pike(1971)<sup>5</sup></i> |
 | Channel Gradient | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}C_{g}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{H}{\frac{\pi}{2}*Cl_{p}}) | <i>Rai(2017)<sup>3</sup></i> |
-| Slope Ratio | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}R_{s}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{S_{ms}}{S_{b}}) | ?? |
+| Slope Ratio | ![text](https://latex.codecogs.com/gif.latex?\dpi{150}R_{s}) | ![equation](https://latex.codecogs.com/gif.latex?\dpi{150}\frac{S_{ms}}{S_{b}}) | <i>Abdel-Fattah(2017)<sup>7</sup></i> |
 
 <p><i><sup>*</sup>Main Channel Length (MCL) is regarded as identical to Basin Length (L<sub>b</sub>) in this program since the calculations are based on <b>Horton stream order</b> (see http://wgbis.ces.iisc.ernet.in/grass/grass70/manuals/addons/r.stream.order.html).
 <br>
 
 <p><i><sup>1</sup>Mahala, A. (2019). The significance of morphometric analysis to understand the hydrological and morphological characteristics in two different morpho-climatic settings. Applied Water Science, 10(1). doi:10.1007/s13201-019-1118-2</i></p>
 <p><i><sup>2</sup>P. Dinagara Pandi, T. Thena, B. Nirmal, M. R. Aswathy, K. Saravanan & K.
-Mohan (2017) Morphometric analyses of Neyyar River Basin, southern Kerala, India, Geology,
+Mohan (2017): Morphometric analyses of Neyyar River Basin, southern Kerala, India, Geology,
 Ecology, and Landscapes, 1:4, 249-256, doi: 10.1080/24749508.2017.1389494</i></p>
-<p><i><sup>3</sup>Rai, P.K., Chaubey, P.K., Mohan, K. et al. Geoinformatics for assessing the inferences of quantitative drainage morphometry of the Narmada Basin in India. Appl Geomat 9, 167–189 (2017). doi: 10.1007/s12518-017-0191-1</i></p>
+<p><i><sup>3</sup>Rai, P.K., Chaubey, P.K., Mohan, K. and Singh, P. (2017): Geoinformatics for assessing the inferences of quantitative drainage morphometry of the Narmada Basin in India. Appl Geomat 9, 167–189. doi: 10.1007/s12518-017-0191-1</i></p>
 <p><i><sup>4</sup>Schumm, S. A. (1956). Evolution of drainage systems & slopes in badlands at Perth Anboy, New Jersey. Geological Society of America Bulletin, 67, 597–646.</i></p>
 <p><i><sup>5</sup>PIKE, R. J. & WILSON, S. E. (1971): Elevation-Relief Ratio, Hypsometric Integral, and Geomorphic Area-Altitude Analysis. GSA Bulletin, 82, S. 1079-1084.</i></p>
 <p><i><sup>6</sup>Horton, R. E. (1932). Drainage-basin characteristics. Transactions, American Geophysical Union, 13, 350–361.</i></p>
+<p><i><sup>7</sup>Abdel-Fattah, M.; Saber, M.; Kantoush, S.A.; Khalil, M.F.; Sumi, T.; Sefelnasr, A.M. (2017): A Hydrological and Geomorphometric Approach to Understanding the Generation of Wadi Flash Floods. Water, 9, 553. doi: 10.3390/w9070553.</i></p>
 
 <br>
 
