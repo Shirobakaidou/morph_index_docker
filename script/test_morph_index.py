@@ -6,32 +6,31 @@
             (https://github.com/OSGeo/grass-addons/tree/master/grass7/raster/r.basin)
 """
 import os
-#import sys
-#import subprocess
 import shutil
 import math
 from glob import glob
+#import sys
+#import subprocess
+#import json
 
 import numpy as np
 import geopandas as gpd
 from shapely.geometry import Polygon, Point, MultiPolygon
 import rioxarray as rio
 import rasterio
+#from rasterio.mask import mask
 
-#import grass_session # To be conmmented in docker env
+import grass_session
 import grass.script as gs
 import grass.script.setup as gsetup
 
 
-# Global Variables (For Docker Env)
-path_input = '/app/input'
-path_output = '/app/output'
+# Global Variables (if in docker env)
+#path_input = '/app/input'
+#path_output = '/app/output'
 
 
-def basinIndex(dem, basin, 
-               inpath=path_input#, 
-               #outpath=path_output
-               ):
+def basinIndex(dem, basin, inpath, outpath):
     """Calculate hydromorphological parameters of each basin polygon
     of the input .shp file, and store the parameters in the attribute
     table of the output .shp file.
@@ -64,10 +63,6 @@ def basinIndex(dem, basin,
     basin_input = basin
     path_basin = os.path.join(inpath, basin_input)
     basin = gpd.read_file(path_basin)
-    
-    # Make dir for output
-    os.mkdir('output/')
-    outpath = os.path.join(os.getcwd(), 'output/')
 
     # GRASS Database
     grass_dbase = os.path.join(outpath, 'grass_session')
@@ -79,55 +74,6 @@ def basinIndex(dem, basin,
     grass_location = 'mylocation'
     
     
-    ###################################
-    ### 0. Set up GRASS Environment ###
-    ###################################
-    
-    # Define GRASS Database
-    dbase = grass_dbase
-    location = grass_location
-
-    # Set GISBASE Environment Variable
-    grass7bin = 'grass'
-
-    # query GRASS GIS itself for its GISBASE
-    print('start command')
-    #startcmd = [grass7bin, '--config', 'path']
-    #try:
-    #    p = subprocess.Popen(startcmd, shell=False,
-    #                         stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    #    out, err = p.communicate()
-    #except OSError as error:
-    #    sys.exit("ERROR: Cannot find GRASS GIS start script"
-    #             " {cmd}: {error}".format(cmd=startcmd[0], error=error))
-    #if p.returncode != 0:
-    #    sys.exit("ERROR: Issues running GRASS GIS start script"
-    #             " {cmd}: {error}"
-    #             .format(cmd=' '.join(startcmd), error=err))
-
-
-    # Set GISBASE Environment Variable
-    #gisbase = '/usr/local/grass'
-    #os.environ['GISBASE'] = str(gisbase)
-    os.environ['GRASS_ADDON_BASE'] = '/usr/local/grass/addons'
-
-    # Initialize
-    gsetup.init(os.environ['GISBASE'], dbase, location, 'PERMANENT')
-    print('gsetup.init successful')
-    
-    # Create Init Location
-    gs.create_location(dbase, location)
-    print('gs.create_location successful')
-    # os.environ['GRASS_ADDON_BASE'] = '/usr/local/grass/addons'
-
-    # Needed for local Docker testing
-    # Install hydrology related GRASS Addons
-    gs.run_command('g.extension', extension='r.stream.basins', operation='add', quiet=True)
-    gs.run_command('g.extension', extension='r.stream.order', operation='add', quiet=True)
-    gs.run_command('g.extension', extension='r.stream.snap', operation='add', quiet=True)
-    gs.run_command('g.extension', extension='r.stream.stats', operation='add', quiet=True)
-
-
     # Set empty list for every Index
     ls_perimeter = []
     ls_area = []
@@ -212,19 +158,48 @@ def basinIndex(dem, basin,
         # Export Masked DEM
         path_dem_output = os.path.join(outpath, dem_input.split(".")[0]+"_msk."+dem_input.split(".")[1])
         dem_prj.rio.to_raster(path_dem_output)
-        #out_meta = dem_prj.meta.copy()
-        #with rasterio.open(path_dem_output, "w", **out_meta) as dest:
-        #    dest.write(dem_prj)
         print("Export masked and projected DEM", i, "done!")
         
         
-        ##############################
-        ### 6. Create New Location ###
-        ##############################
+        ###################################
+        ### 0. Set up GRASS Environment ###
+        ###################################
+        
+        # Define GRASS Database
+        dbase = grass_dbase
+        location = grass_location
+    
+        # Set GISBASE Environment Variable
+        grass7bin = 'grass'
+    
+        # query GRASS GIS itself for its GISBASE
+        print('start command')
+        #startcmd = [grass7bin, '--config', 'path']
+        #try:
+        #    p = subprocess.Popen(startcmd, shell=False,
+        #                         stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        #    out, err = p.communicate()
+        #except OSError as error:
+        #    sys.exit("ERROR: Cannot find GRASS GIS start script"
+        #             " {cmd}: {error}".format(cmd=startcmd[0], error=error))
+        #if p.returncode != 0:
+        #    sys.exit("ERROR: Issues running GRASS GIS start script"
+        #             " {cmd}: {error}"
+        #             .format(cmd=' '.join(startcmd), error=err))
+    
+    
+        # Set GISBASE Environment Variable
+        #gisbase = '/usr/local/grass'
+        #os.environ['GISBASE'] = str(gisbase)
+        os.environ['GRASS_ADDON_BASE'] = '/usr/local/grass/addons'
+    
+        # Initialize
+        gsetup.init(os.environ['GISBASE'], dbase, location, 'PERMANENT')
+        print('gsetup.init successful')
         
         # Create Init Location
-        #gs.create_location(dbase, location)
-        #print('gs.create_location successful')
+        gs.create_location(dbase, location)
+        print('gs.create_location successful')
         # os.environ['GRASS_ADDON_BASE'] = '/usr/local/grass/addons'
     
         # Create New Location in Target Projection
@@ -240,6 +215,13 @@ def basinIndex(dem, basin,
                        mapset = "PERMANENT")
         print('grass location is: ', grass_location)
         
+        # Install hydrology related GRASS Addons
+        #gs.run_command('g.extension', extension='r.stream.basins', operation='add', quiet=True)
+        #gs.run_command('g.extension', extension='r.stream.order', operation='add', quiet=True)
+        #gs.run_command('g.extension', extension='r.stream.snap', operation='add', quiet=True)
+        #gs.run_command('g.extension', extension='r.stream.stats', operation='add', quiet=True)
+    
+
 
 
         ###-------------Calculate Hydromorph Parameters using GRASS-------------------###
@@ -826,9 +808,17 @@ def basinIndex(dem, basin,
 
     return(print("The calculated Parameters are stored in ", path_basin_index))
 
- 
 
+# Local Env
 dem_input = 'SRTM_V4_90m_Vietnam_larger.tif'
 basin_input = "aoi_sub.gpkg"
+path_output = "/home/shirobakaidou/EAGLE/Hiwi/BasinIndice/basinindices_don_github/output"
+path_input = "/home/shirobakaidou/EAGLE/Hiwi/BasinIndice/basinindices_don_github/input"
 
-basinIndex(dem=dem_input, basin=basin_input, inpath=path_input)
+
+# Docker Env
+#dem_input = 'SRTM_V4_90m_Vietnam_larger.tif'
+#basin_input = "aoi_sub.gpkg"
+
+basinIndex(inpath=path_input, outpath=path_output, dem=dem_input, basin=basin_input)
+
